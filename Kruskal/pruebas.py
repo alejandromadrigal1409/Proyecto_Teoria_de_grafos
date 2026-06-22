@@ -65,7 +65,7 @@ for i, (n, p) in enumerate(tests):
         pos,
         ax=ax[0],
         with_labels=True,
-        node_size=800
+        node_size=150
     )
     nx.draw_networkx_edge_labels(
         G,
@@ -82,7 +82,7 @@ for i, (n, p) in enumerate(tests):
         pos,
         ax=ax[1],
         with_labels=True,
-        node_size=800
+        node_size=150
     )
 
     nx.draw_networkx_edge_labels(
