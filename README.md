@@ -1,20 +1,20 @@
 # Teoría de Grafos
 
-Este repositorio contiene la implementación en Python de algoritmos de teoría de grafos. Para la generación y manipulación de grafos se utiliza la librería **NetworkX**, mientras que la visualización de los resultados se realiza mediante **Matplotlib**.
+Este repositorio contiene implementaciones en Python de algoritmos clásicos de teoría de grafos. Para la generación y manipulación de grafos se utiliza la librería **NetworkX**, y para la visualización de resultados, **Matplotlib**.
 
-Los algoritmos implementados en este proyecto son:
+Los algoritmos implementados son:
 
 - Generación de grafos r-regulares de orden n.
 - Generación de un grafo a partir de una sucesión gráfica.
 - Kruskal.
-- Kruskal inverso (Reverse Delete).
+- Kruskal Inverso (Reverse Delete).
 - Prim.
 
-Además, para cada algoritmo el repositorio incluye una carpeta con capturas que muestran el funcionamiento y los resultados obtenidos por cada algoritmo.
+Cada algoritmo cuenta con una carpeta de resultados que incluye capturas del funcionamiento y los resultados obtenidos.
 
 ## Instalación
 
-Para la correcta ejecución del proyecto, es necesario instalar las siguientes dependencias:
+Para ejecutar el proyecto, instala las dependencias necesarias con:
 
 ```bash
 pip install networkx matplotlib
@@ -22,35 +22,37 @@ pip install networkx matplotlib
 
 ## Metodología de desarrollo
 
-En este proyecto, cada algoritmo fue implementado de forma modular, utilizando estructuras de grafos proporcionadas por la librería NetworkX. A continuación se describe de manera breve la función de cada uno de los métodos implementados:
+Cada algoritmo fue implementado de forma modular, aprovechando las estructuras de grafos que ofrece NetworkX. A continuación se describe brevemente cada uno:
 
 ### Generación de grafos r-regulares de orden n
 
-construye grafos en los que todos los n vértices tienen el mismo grado r, verificando previamente la factibilidad de la construcción., es decir que r < n y r*n es par
+Construye grafos en los que todos los `n` vértices tienen el mismo grado `r`, verificando previamente la factibilidad de la construcción (es decir, que `r < n` y que `r * n` sea par).
 
-![Descripción de la imagen](Grafos_regulares/resultados/Grafo_10_regular_orden_20.png)
+![Grafo 10-regular de orden 20](Grafos_regulares/resultados/Grafo_10_regular_orden_20.png)
 
 ### Generación de un grafo a partir de una sucesión gráfica
 
-determina si una secuencia de grados es válida y construye un grafo simple que la satisface.
+Determina si una secuencia de grados es válida y construye un grafo simple que la satisface.
 
-![Descripción de la imagen](Sucesion_grafica/resultados/Grafo_sucesion_5_5_5_5_2_2_2_2_1_1.png)
+![Grafo generado a partir de la sucesión 5,5,5,5,2,2,2,2,1,1](Sucesion_grafica/resultados/Grafo_sucesion_5_5_5_5_2_2_2_2_1_1.png)
 
 ### Kruskal
 
-obtiene un árbol generador mínimo seleccionando iterativamente las aristas de menor peso sin formar ciclos.
+Obtiene un árbol generador mínimo seleccionando iterativamente las aristas de menor peso, evitando la formación de ciclos.
 
-![Descripción de la imagen](Kruskal/resultados/Kruskal_MST_experimento_3.png)
+![Árbol generador mínimo — Kruskal (experimento 3)](Kruskal/resultados/Kruskal_MST_experimento_3.png)
 
-### Kruskal inverso (Reverse Delete)
-parte del grafo completo y elimina aristas de mayor peso siempre que no desconecten el grafo, hasta obtener un árbol generador mínimo.
+### Kruskal Inverso (Reverse Delete)
 
-![Descripción de la imagen](Reverse_Delete/resultados/Reverse_Delete_MST_experimento_3.png)
+Parte del grafo completo y elimina aristas de mayor peso, siempre que su eliminación no desconecte el grafo, hasta obtener un árbol generador mínimo.
+
+![Árbol generador mínimo — Reverse Delete (experimento 3)](Reverse_Delete/resultados/Reverse_Delete_MST_experimento_3.png)
 
 ### Prim
-construye un árbol generador mínimo expandiendo progresivamente un conjunto de vértices, añadiendo siempre la arista de menor peso que conecta con un vértice no incluido.
 
-![Descripción de la imagen](Prim/resultados/Prim_MST_experimento_4.png)
+Construye un árbol generador mínimo expandiendo progresivamente un conjunto de vértices, añadiendo en cada paso la arista de menor peso que conecta un vértice ya incluido con uno que aún no lo está.
+
+![Árbol generador mínimo — Prim (experimento 4)](Prim/resultados/Prim_MST_experimento_4.png)
 
 Autor
 
