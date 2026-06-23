@@ -40,8 +40,18 @@ determina si una secuencia de grados es válida y construye un grafo simple que 
 
 obtiene un árbol generador mínimo seleccionando iterativamente las aristas de menor peso sin formar ciclos.
 
+![Descripción de la imagen](Kruskal/resultados/Kruskal_MST_experimento_3.png)
+
 ### Kruskal inverso (Reverse Delete)
 parte del grafo completo y elimina aristas de mayor peso siempre que no desconecten el grafo, hasta obtener un árbol generador mínimo.
 
+![Descripción de la imagen](Reverse_Delete/resultados/Reverse_Delete_MST_experimento_3.png)
+
 ### Prim
 construye un árbol generador mínimo expandiendo progresivamente un conjunto de vértices, añadiendo siempre la arista de menor peso que conecta con un vértice no incluido.
+
+![Descripción de la imagen](Prim/resultados/Prim_MST_experimento_4.png)
+
+Autor
+
+Alejandro Madrigal
