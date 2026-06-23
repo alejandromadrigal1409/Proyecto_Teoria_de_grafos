@@ -1,7 +1,7 @@
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
-from Reverse_Delete import ReverseDeleteAlgorithm
+from Prim import primAlgorithm
 import random
 
 os.makedirs("resultados", exist_ok=True)
@@ -47,7 +47,7 @@ for i, (n, p) in enumerate(tests):
     for u, v in G.edges():
         G[u][v]["weight"] = random.randint(1, 100)
 
-    T = ReverseDeleteAlgorithm(G)
+    T = primAlgorithm(G)
 
     # Crear subplots
     fig, ax = plt.subplots(1, 2, figsize=(12, 6))
@@ -92,9 +92,9 @@ for i, (n, p) in enumerate(tests):
         ax=ax[1]
     )
 
-    ax[1].set_title("Árbol de expansión mínima (Reverse Delete)")
+    ax[1].set_title("Árbol de expansión mínima (Prim)")
 
-    nombre = f"resultados/Reverse_Delete_MST_experimento_{i + 1}.png"
+    nombre = f"resultados/Prim_MST_experimento_{i + 1}.png"
 
     plt.savefig(
         nombre, 
