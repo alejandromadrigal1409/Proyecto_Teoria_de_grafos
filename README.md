@@ -18,6 +18,7 @@ Para la correcta ejecución del proyecto, es necesario instalar las siguientes d
 
 ```bash
 pip install networkx matplotlib
+```
 
 ## Metodología de desarrollo
 
