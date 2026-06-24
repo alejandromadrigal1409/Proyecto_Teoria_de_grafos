@@ -22,8 +22,6 @@ pip install networkx matplotlib
 
 ## Metodología de desarrollo
 
-Cada algoritmo fue implementado de forma modular, aprovechando las estructuras de grafos que ofrece NetworkX. A continuación se describe brevemente cada uno:
-
 ---
 
 ### Generación de grafos r-regulares de orden n
